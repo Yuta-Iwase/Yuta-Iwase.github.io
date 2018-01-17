@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>canvasで図形を描く</title>
+
+<script type="text/javascript">
+<!--
+function sample() {
+  // キャンパスのオブジェクト情報取得
+  var canvas = document.getElementById('sample1');
+  var context = canvas.getContext('2d');
+
+  // 画像データ読み込み
+  sample_image = new Image;
+  sample_image.src = "http://farm1.static.flickr.com/139/362556361_93fe264eaf_o.jpg";
+
+  // 読み込み終了後、描写
+  sample_image.onload = function() {
+    page_draw();
+  };
+  function page_draw(){
+    context.drawImage(sample_image,100, 0, 100, 100);
+    context.drawImage(sample_image,50, 0, 100, 100);
+  }
+  
+}
+//-->
+</script>
+
+</head>
+<body onLoad="sample()">
+<h2>canvasで図形を描く</h2>
+<canvas id="sample1" style="background-color:yellow;">
+図形を表示するには、canvasタグをサポートしたブラウザが必要です。
+</canvas>
+</body>
+</html>
