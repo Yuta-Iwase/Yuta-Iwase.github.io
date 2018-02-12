@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+body {
+  font-family: Lato, "Noto Sans JP", メイリオ, Meiryo, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 游ゴシック体, 'Yu Gothic', YuGothic, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
+  padding: 0;
+  margin: 0;
+}
