@@ -8,3 +8,63 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.wrapper{
+  position: relative;
+  width:100%;
+  height:70%;
+}
+.layer{
+  position: absolute;
+}
+
+#titleWrapper{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: table;
+  width: 1000px;
+  height: 300px;
+  color: #ffffff;
+  text-shadow: 1px 1px 20px #000;
+  text-align: center;
+}
+#titleInner{
+  display: table-cell;
+  vertical-align: middle;
+}
+#title{
+  display: inline-block;
+  font-size: 54px;
+  border-bottom:solid 5px #ffffff;
+  padding:7px 10px;
+}
+#menubar{
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  border-top:solid 3px rgba(0,0,0,1);
+  width:100%;
+  height:60px;
+}
+#menulistWrapper{
+  margin-left: 10%;
+  margin-right: 10%;
+  width:80%;
+  height:60px;
+}
+#menulist{
+  display: inline;
+  line-height: 58px;
+  color:#ffffff;
+  list-style-type: none;
+  padding:0;
+  margin:0;
+}
+
+#menulist > * {
+  float:left;
+  text-align:center;
+  width:20%;
+}
