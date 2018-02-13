@@ -4,6 +4,7 @@
 
 body {
   font-family: Lato, "Noto Sans JP", メイリオ, Meiryo, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 游ゴシック体, 'Yu Gothic', YuGothic, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 18px;
 
   padding: 0;
   margin: 0;
@@ -64,6 +65,15 @@ body {
 #selected{
   background-color: rgba(230,230,230,1.0) !important;
 }
+#contentBlock{
+  background-color: #abcdef; /* 最後にココ消す */
+  width:80%;
+  margin-top: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+  min-width:150px;
+  height:600px;
+}
 
 #menulist > li {
   background-color: rgba(0,0,0,0.0);
@@ -92,3 +102,7 @@ body {
 #selected > a{
   color:#000000 !important;
 }
+#contentBlock .level1{ margin-left:  0px; }
+#contentBlock .level2{ margin-left: 30px; }
+#contentBlock .level3{ margin-left: 60px; }
+#contentBlock .level4{ margin-left: 90px; }
