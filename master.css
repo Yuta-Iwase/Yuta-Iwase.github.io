@@ -73,6 +73,16 @@ body {
   margin-right: 10%;
   height:600px;
 }
+#footer{
+  width:100%;
+  height:300px;
+  /* 参考: http://shanabrian.com/web/css3/radial-gradient.php */
+  background:-webkit-gradient(radial, center top, 0, center top,100%, from(#858585), to(rgb(30,32,45)));
+  background:-webkit-radial-gradient(center top, circle farthest-side, #858585 0, rgb(30,32,45) 100%);
+  background:-moz-radial-gradient(center top, circle farthest-side, #858585 0, rgb(30,32,45) 100%);
+  background:-o-radial-gradient(center top, circle farthest-side, #858585 0, rgb(30,32,45) 100%);
+  background:radial-gradient(farthest-side circle at center top, #858585 0, rgb(30,32,45) 100%);
+}
 
 #menulist > li {
   background-color: rgba(0,0,0,0.0);
