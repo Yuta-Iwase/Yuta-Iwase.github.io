@@ -74,6 +74,7 @@ body {
   height:600px;
 }
 #footer{
+  margin-top:50px;
   width:100%;
   height:300px;
   /* 参考: http://shanabrian.com/web/css3/radial-gradient.php */
