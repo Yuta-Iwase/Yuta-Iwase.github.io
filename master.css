@@ -67,10 +67,9 @@ body {
 }
 #selected{
   background-color: rgba(230,230,230,1.0) !important;
+  font-weight: 600;
 }
 #contentBlock{
-  /* background-color: #abcdef; /* 最後にココ消す */ */
-/* height:600px; */
   width:80%;
   margin-top: 30px;
   margin-left: 10%;
@@ -96,7 +95,9 @@ body {
   font-size: 24px;
   float:left;
   text-align:center;
-  width:25%;
+  /* widthでメニューバーの長さ調整
+  割合は 1/要素数 で設定 */
+  width:20%;
   margin: 0px;
   padding: 0px;
 }

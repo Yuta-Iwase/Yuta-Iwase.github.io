@@ -16,6 +16,10 @@ h3{
   display: inline-block;
   width:5.5em;
 }
+.shorter_period{
+  display: inline-block;
+  width:4.5em;
+}
 .hyphen{
   margin-right:0.5em;
 }
