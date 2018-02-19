@@ -6,23 +6,6 @@
   <link rel="stylesheet" href="master.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="particlesSetting.css">
-  <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="script.js"></script>
-
-  <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    $(function(){
-    	$('a[href^=#]').click(function(){
-    		var speed = 500;
-    		var href= $(this).attr("href");
-    		var target = $(href == "#" || href == "" ? 'html' : href);
-    		var position = target.offset().top;
-    		$("html, body").animate({scrollTop:position}, speed, "swing");
-    		return false;
-    	});
-    });
-  </script> -->
-
 </head>
 
 <body>
@@ -37,8 +20,8 @@
         <div id="menulistWrapper">
           <ul id="menulist">
             <li id="selected"><a href="#dummy">TOP</a></li>
-            <li><a href="#dummy">ABOUT</a></li>
-            <li><a href="#dummy">ACTIVITIES</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#activities">ACTIVITIES</a></li>
             <li><a href="#dummy">DOCUMENTS</a></li>
             <li><a href="#dummy">BLOG</a></li>
           </ul>
@@ -50,7 +33,7 @@
   <div id="contentBlock">
 
     <div class="level1">
-      <h2 class="section">ABOUT</h2>
+      <h2 class="section" id="about">ABOUT</h2>
     </div>
 
     <div class="level2">
@@ -147,9 +130,8 @@
       ネットワーク科学
     </div>
 
-<div id="dummy"></div>
     <div class="level1">
-      <h2 class="section" style="margin-top:100px;">ACTIVITIES</h2>
+      <h2 class="section" id="activities" style="margin-top:100px;">ACTIVITIES</h2>
     </div>
     <div class="level2">
       <ul>
@@ -179,5 +161,8 @@
 
   <script src="particles/particles.js"></script>
   <script src="particlesSetting.js"></script>
+
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
