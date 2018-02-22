@@ -6,7 +6,6 @@ body {
   font-family: Lato, "Noto Sans JP", メイリオ, Meiryo, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 游ゴシック体, 'Yu Gothic', YuGothic, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   font-size: 18px;
   color: #222222;
-
   padding: 0;
   margin: 0;
 }
@@ -23,6 +22,12 @@ body {
   display: inline-block;
 }
 
+#up_btn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  filter: drop-shadow(2px 2px 4px #000);
+}
 #titleWrapper{
   top: 0;
   left: 0;
@@ -78,10 +83,17 @@ body {
 
 }
 #footer1{
+  font-size: 16px;
+  color: #bbbaba;
   margin-top:70px;
   width:100%;
   height:300px;
   background: linear-gradient(180deg, rgb(70,70,70), rgb(40,40,40));
+}
+#sns_list{
+  font-size: 40px;
+  text-align: center;
+  margin-top:40px;
 }
 #footer2{
   display:flex;
@@ -126,13 +138,29 @@ body {
 #selected > a{
   color:#000000 !important;
 }
-#up_btn{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  filter: drop-shadow(2px 2px 4px #000);
-}
 #contentBlock .level1{ margin-left:  0px; }
 #contentBlock .level2{ margin-left: 30px; }
 #contentBlock .level3{ margin-left: 60px; }
 #contentBlock .level4{ margin-left: 90px; }
+#footer1 ul{
+  list-style-type: none;
+  padding: 0px 0px 0px 10px;
+}
+#footer1 h6{
+  font-size: 20px;
+  color: #d7d7d7;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-shadow: 0px -2px rgba(0, 0, 0, .8);
+}
+#footer1 a{
+  color: #bbbaba;
+}
+#sns_list span{
+  transition: color 0.3s;
+  margin: 0em 0.25em 0em 0.25em;
+}
+#sns_list span:hover{
+  color: rgb(255,255,255);
+  transition: color 0.5s;
+}
