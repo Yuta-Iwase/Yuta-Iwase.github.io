@@ -20,6 +20,7 @@ body {
 }
 .box{
   display: inline-block;
+  vertical-align: top;
 }
 
 #up_btn{
