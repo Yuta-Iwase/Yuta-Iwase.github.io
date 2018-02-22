@@ -184,7 +184,7 @@ body {
   display: inline-block;
 }
 #author_content li{
-  margin-top:0.2em;
+  margin-bottom:0.2em;
 }
 #sns_list a{
   transition: color 0.3s;
