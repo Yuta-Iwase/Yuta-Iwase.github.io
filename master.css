@@ -183,6 +183,9 @@ body {
   margin-bottom: 0px;
   display: inline-block;
 }
+#author_content li{
+  margin-top:0.2em;
+}
 #sns_list a{
   transition: color 0.3s;
   padding: 0.25em 0.4em;
@@ -211,7 +214,7 @@ body {
   content:"\f105";
   padding-right:0.7em;
 }
-#menu_box > ul > li > a{
+#menu_box ul li a{
   display: inline-block;
   width:80%;
   text-decoration:none;
@@ -219,7 +222,7 @@ body {
   padding-bottom: 0.4em;
   transition: color 1.0s, margin-left 1.0s;
 }
-#menu_box > ul > li > a:hover{
+#menu_box ul li a:hover{
   color: rgb(255,255,255);
   transition: color 0.5s, margin-left 1.0s;
   margin-left:10px;
