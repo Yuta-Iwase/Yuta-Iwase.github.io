@@ -23,3 +23,9 @@ h3{
 .hyphen{
   margin-right:0.5em;
 }
+
+#particles{
+  margin:0px;
+  padding:0px;
+  background-color:#3232BF;
+}
