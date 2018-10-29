@@ -227,3 +227,12 @@ body {
   transition: color 0.5s, margin-left 1.0s;
   margin-left:10px;
 }
+.decorated_link{
+  color : #0000ee;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+.decorated_link:hover{
+  color : #3ccd72;
+  transition: color 0.3s;
+}
