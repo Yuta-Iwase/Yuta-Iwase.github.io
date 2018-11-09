@@ -29,6 +29,7 @@ function ajax(index){
       var notFound;
       var title, desk, image;
       var image_notfound = "../src/noimage.png";
+      var pdf_image = "../src/pdf_image.png";
 
       notFound = true;
       propertyList = ["og:title", "title"];
@@ -54,7 +55,14 @@ function ajax(index){
         }
       }
       if(notFound){
-        title = responseText.find("title")[0].text;
+        if(responseText.find("title").length>0){
+          title = responseText.find("title")[0].text;
+        }else {
+          title = "no title";
+        }
+      }
+      if($(classList[index]).attr("title") != null){
+        title = $(classList[index]).attr("title");
       }
 
       notFound = true;
@@ -83,6 +91,9 @@ function ajax(index){
         }
       }
       if(notFound) desk="";
+      if($(classList[index]).attr("description") != null){
+        desk = $(classList[index]).attr("description");
+      }
 
       notFound = true;
       propertyList = ["og:image", "image"];
@@ -102,6 +113,10 @@ function ajax(index){
         }
       }
       if(notFound) image = image_notfound;
+      if($(classList[index]).attr("image") != null){
+        image = $(classList[index]).attr("image");
+      }
+      if(URL_list[index].indexOf(".pdf")==URL_list[index].length-4) image = pdf_image;
 
       var currentURL = URL_list[index];
       var omittedURL = currentURL.substring(currentURL.indexOf("//")+2,currentURL.length);
