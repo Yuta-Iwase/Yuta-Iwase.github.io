@@ -16,7 +16,7 @@ h3{
 .article{
   display: inline-block;
   position: relative;
-  margin:0px;
+  margin: 2px;
   padding:0px;
   border: 1.4px solid rgba(0,0,0,.1);
   border-radius: 8px;
@@ -38,6 +38,7 @@ h3{
   min-height: 25px;
   width:364px;
   font-size: 17px;
+  vertical-align: bottom;
 }
 
 .article:hover .title{
@@ -51,6 +52,7 @@ h3{
   min-height: 19px;
   width:364px;
   font-size: 13px;
+  vertical-align: bottom;
 }
 
 .domain{

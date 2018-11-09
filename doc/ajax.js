@@ -122,7 +122,7 @@ function ajax(index){
       var omittedURL = currentURL.substring(currentURL.indexOf("//")+2,currentURL.length);
       var domain = omittedURL.substring(0,omittedURL.indexOf("/"));
 
-      var initCode = "<div class=\"article\">"
+      var initCode = "<div>"
       var titleCode = "<h2 class=\"title\">" + title + "</h2><br>";
       var deskCode = "<div class=\"description\">" + desk + "</div><br>";
       var domainCode = "<div class=\"domain\">" + domain + "</div>";
