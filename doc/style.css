@@ -16,7 +16,7 @@ h3{
 .article{
   display: inline-block;
   position: relative;
-  margin: 2px;
+  margin: 0px 0px 2px 0px;
   padding:0px;
   border: 1.4px solid rgba(0,0,0,.1);
   border-radius: 8px;
