@@ -66,33 +66,9 @@
 	<!-- ここの主情報 -->
 	<div id="main">
 		<section>
-			<h2>オブジェクト</h2>
-			Javaにおいてオブジェクトとは、複数の変数やメソッドの情報をひとまとりにして管理できる一つの変数。<br>
-			これを活用することで、プログラムの可読性をあげることや、プログラムの修正を効率的に行うことなどが期待できる。<br>
+			<h2>このページについて</h2>
+			オブジェクト指向についてのメモ書きをまとめたサイトです。
 		</section>
-
-		<section>
-			<h2>オブジェクトの生成</h2>
-			2つのクラスを準備する。1つは生成するオブジェクトを管理するクラス<code class="inlineCode">Pikachu</code>と、もう1つは<code class="inlineCode">Pikachu</code>mainメソッドでオブジェクトを生成し操作するクラス<code class="inlineCode">GameMaster</code>。<br>
-			<script src="https://gist.github.com/Yuta-Iwase/d8134a5e06eb15697aa2f44f213cb9dd.js"></script>
-			<script src="https://gist.github.com/Yuta-Iwase/7fed0868b1d57d507ab394dc8add4505.js"></script>
-			個々のピカチュウそれぞれに、体力<code class="inlineCode">hp</code>、攻撃力<code class="inlineCode">atk</code>、ニックネーム<code class="inlineCode">nickname</code>の設定をもたせる。
-			それを実現するために<code class="inlineCode">Pikachu</code>の4～6行目で<b>フィールド変数</b>を設定する。このフィールド変数は(基本的に)オブジェクトごとに別々の値を取ることができる。<br>
-			次に、<b>コンストラクタ</b>を設定する。これはオブジェクト生成時に必ず処理される部分で、主にフィールド変数の値を設定(これをフィールド変数の初期化という)するのに用いられる。<br>
-			そして、<code class="inlineCode">GameMaster</code>の5,6行目で2匹のピカチュウ、ピカタロウとピカジロウを生成を行う。見ての通り、各個体ごとに設定できる。<br>
-			ここまで正しく書けていれば<code class="inlineCode">GameMaster</code>を実行することで、以下のメッセージが表示される。<br>
-			<img src="images/fig1.png"><br>
-
-			<div class="space"></div>
-			では、ピカチュウ同士を闘わせてみる。<br>
-			<script src="https://gist.github.com/Yuta-Iwase/619cecb3adf57a5496d36606034d6326.js"></script>
-			<script src="https://gist.github.com/Yuta-Iwase/0093b1edad7922e6969d6f549ca4b1ce.js"></script>
-			<code class="inlineCode">Pikachu</code>に攻撃用のメソッド<code class="inlineCode">attackToPikachu(Pikachu target)</code>とステータス表示のメソッド<code class="inlineCode">printStatus()</code>を追加した。
-			<code class="inlineCode">GameMaster</code>でこれらのメソッドを作動させる。一度書いてしまえは複雑な処理を一行で実行できるのがメソッドの利点。ここまで正しく書けていれば以下のメッセージが表示される。<br>
-			<img src="images/fig2.png"><br>
-
-		</section>
-
 
 	</div>
 	<!--/main-->
