@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>オブジェクトの継承 | オブジェクト指向入門</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="description" content="オブジェクト指向の基本と活用法を書いていきます。">
+  <meta name="keywords" content="岩瀬優太, オブジェクト指向">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="オブジェクト指向入門" />
+  <meta property="og:title" content="オブジェクト指向入門" />
+  <meta property="og:url" content="https://yuta-iwase.github.io/doc/obj/index.html" />
+  <meta property="og:description" content="オブジェクト指向の基本と活用法を書いていきます。"/>
+  <meta property="og:image" content="https://yuta-iwase.github.io/src/icon.png" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="オブジェクト指向入門" />
+  <meta name="twitter:url" content="https://yuta-iwase.github.io/doc/obj/index.html" />
+  <meta name="twitter:description" content="オブジェクト指向の基本と活用法を書いていきます。" />
+  <meta name="twitter:image" content="https://yuta-iwase.github.io/src/icon.png" />
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mystyle.css">
+
+	<link rel="stylesheet" href="../../master.css">
+	<!-- https://lonekorean.github.io/gist-syntax-themes/ -->
+	<link rel="stylesheet" href="../../gist_monokai.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/openclose.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106189586-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-106189586-3');
+	</script>
+</head>
+
+<body id="top">
+
+	<h1>オブジェクト指向入門</h1>
+
+	<div id="container">
+
+	<header>
+		<img src="images/logo.png" id="logo">
+		<aside id="mainimg">
+			<img id="slide_image" src="images/coffee.jpg" alt="" width="950" height="300" />
+		</aside>
+	</header>
+
+	<nav id="menubar">
+		<iframe src="menubar.html" id="menubar" scrolling="no" frameborder="no">このブラウザではメニューは表示できません。</iframe>
+	</nav>
+
+	<div id="contents">
+
+	<!-- ここの主情報 -->
+	<div id="main">
+		<section>
+			<h2>既存のオブジェクトの問題点</h2>
+			ここのでの知識で作ったオブジェクトにはある問題点を抱えている。
+			具体的には、<code class="inlineCode">Pikachu</code>の<code class="inlineCode">attackToPikachu(Pikachu target)</code>には問題点がある。
+			<br>
+			それを示すために、新たにイーブイのクラス<code class="inlineCode">Eevee</code>を追加し、<code class="inlineCode">Pikachu</code>クラスも新たなメソッドを書き加える。
+			<br>
+			<script src="https://gist.github.com/Yuta-Iwase/2a527562b0e84fc15b6b078ce275d983.js"></script>
+			<script src="https://gist.github.com/Yuta-Iwase/1ac6a0e8b951cc37db35263bba70802a.js"></script>
+			<code class="inlineCode">Pikachu</code>と<code class="inlineCode">Eevee</code>には共に、攻撃用のメソッドとして<code class="inlineCode">attackToPikachu</code>と<code class="inlineCode">attackToEevee</code>を持っている。
+			いまはポケモンが2種だから良いが、ポケモン800種もいる場合、<u>全員分の攻撃メソッド800個を準備しなくてはならずとても困難</u>。
+			<br>
+			この大変さはポケモンの種類の2乗に比例して増加していく。
+			例えば、801番目のポケモンを追加する場合、800匹分のポケモンに攻撃メソッドを書き加えなくてはならない。
+			<br>
+			<b>継承</b>という機能を理解することで、このような問題も解決することができる。
+		</section>
+
+		<section>
+			<h2>オブジェクトの継承</h2>
+			<u>ピカチュウとイーブイは"ポケモン"である。</u>すべてのポケモンに共通する事項を記述するクラス<code class="inlineCode">Pokemon</code>の作成に試みてみよう。
+			<script src="https://gist.github.com/Yuta-Iwase/4bf88fa7b612b39889a6cff9bc72ce65.js"></script>
+			先程のまでの<code class="inlineCode">Pikachu</code>と<code class="inlineCode">Eevee</code>の機能のほとんどを<code class="inlineCode">Pokemon</code>で記述した。
+			攻撃メソッドは<code class="inlineCode">attack(Pokemon target)</code>として、引数に<code class="inlineCode">Pokemon</code>オブジェクトを要求するようにした。
+			<br>
+			では、<code class="inlineCode">Pokemon</code>クラスの機能を持った<code class="inlineCode">Pikachu</code>と<code class="inlineCode">Eevee</code>を作ってみる。
+			次のように書くだけで良い。
+			<script src="https://gist.github.com/Yuta-Iwase/581530721fc256f2eb5ddfc3e7e11056.js"></script>
+			<script src="https://gist.github.com/Yuta-Iwase/42668b4762acd3bebb1eb12790187e29.js"></script>
+			2行目の様にクラス名の後に<code class="inlineCode">extends 引き継ぎたいクラス</code>と書くことで機能を引き継ぐことができる。この引き継ぎのことを<b>継承</b>と呼ぶ。
+			<br>
+			<code class="inlineCode">Pokemon</code>は<code class="inlineCode">Pikachu</code>と<code class="inlineCode">Eevee</code>の機能をほとんど含んでいたので、書くことはほとんど無い。
+			しかし、コンストラクタは書き直す必要がある。<code class="inlineCode">Pikachu</code>のコメント参照。
+			<br>
+			さらにうれしいことに<code class="inlineCode">Pikachu</code>と<code class="inlineCode">Eevee</code>オブジェクトは<code class="inlineCode">Pokemon</code>オブジェクトとしても扱われる。
+			つまり、<code class="inlineCode">attack(Pokemon target)</code>の引数に<code class="inlineCode">Pikachu</code>と<code class="inlineCode">Eevee</code>のいずれも指定することができる。
+			<script src="https://gist.github.com/Yuta-Iwase/dd2b06e5036dac07b4e3b134c7ef39cc.js"></script>
+			このように<code class="inlineCode">attack</code>の引数にピカチュウやイーブイを指定してもエラーは出ない。
+			<code class="inlineCode">attack(Pokemon target)</code>メソッドを活用することで800個もメソッドを作る必要はなくなる。
+			<br>
+			ここまで正しくかけていれば次のように表示されるはず。
+			<br>
+			<img src="images/fig3.png"><br>
+			もちろん、<code class="inlineCode">Pikachu</code>と<code class="inlineCode">Eevee</code>は他のポケモンにはない固有の能力を追加で記述することも可能。<br>
+			<script src="https://gist.github.com/Yuta-Iwase/c68d88fba5748f49b6c0314f150924a7.js"></script>
+			<script src="https://gist.github.com/Yuta-Iwase/5d50bbe3e794acb0177a237850df7119.js"></script>
+			<script src="https://gist.github.com/Yuta-Iwase/d8f2c10f0a6661d7880a056057c0f101.js"></script>
+			<img src="images/fig4.png"><br>
+
+
+
+
+		</section>
+
+
+	</div>
+	<!--/main-->
+
+
+	<div id="sub">
+
+	<section id="submenu">
+		<iframe src="menu.html" id="menu" scrolling="no" frameborder="no">このブラウザではメニューは表示できません。</iframe>
+	</section>
+
+	</div>
+	<!--/sub-->
+
+	<p id="pagetop"><a href="#">↑ PAGE TOP</a></p>
+
+	</div>
+	<!--/contents-->
+
+	</div>
+	<!--/container-->
+
+	<footer>
+	<small>Copyright&copy; 2018 <a href="https://yuta-iwase.github.io">Yuta Iwase</a> All Rights Reserved.</small>
+	<span class="pr"><a href="http://template-party.com/" target="_blank">Web Design:Template-Party</a></span>
+	</footer>
+
+	<!--スライドショースクリプト-->
+	<script type="text/javascript" src="js/slide_simple_pack.js"></script>
+
+	<!--スマホ用更新情報-->
+	<script type="text/javascript">
+	if (OCwindowWidth() < 480) {
+		open_close("newinfo_hdr", "newinfo");
+	}
+	</script>
+
+</body>
+</html>

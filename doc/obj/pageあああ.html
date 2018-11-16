@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>オブジェクトの基礎 | オブジェクト指向入門</title>
+
+	<!-- metaタグ置き場 -->
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mystyle.css">
+
+	<link rel="stylesheet" href="master.css">
+	<!-- https://lonekorean.github.io/gist-syntax-themes/ -->
+	<link rel="stylesheet" href="gist_monokai.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/openclose.js"></script>
+</head>
+
+<body id="top">
+
+	<h1>オブジェクト指向入門</h1>
+
+	<div id="container">
+
+	<header>
+		<img src="images/logo.png" id="logo">
+		<aside id="mainimg">
+			<img id="slide_image" src="images/coffee.jpg" alt="" width="950" height="300" />
+		</aside>
+	</header>
+
+	<nav id="menubar">
+		<iframe src="menubar.html" id="menubar" scrolling="no" frameborder="no">このブラウザではメニューは表示できません。</iframe>
+	</nav>
+
+	<div id="contents">
+
+	<!-- ここの主情報 -->
+	<div id="main">
+		<section>
+			<h2>オブジェクト</h2>
+			Javaにおいてオブジェクトとは、複数の変数やメソッドの情報をひとまとりにして管理できる一つの変数。<br>
+			これを活用することで、プログラムの可読性をあげることや、プログラムの修正を効率的に行うことなどが期待できる。<br>
+		</section>
+
+		<section>
+			<h2>オブジェクトの生成</h2>
+			2つのクラスを準備する。1つは生成するオブジェクトを管理するクラス<code class="inlineCode">Pikachu</code>と、もう1つは<code class="inlineCode">Pikachu</code>mainメソッドでオブジェクトを生成し操作するクラス<code class="inlineCode">GameMaster</code>。<br>
+			<script src="https://gist.github.com/Yuta-Iwase/d8134a5e06eb15697aa2f44f213cb9dd.js"></script>
+			<script src="https://gist.github.com/Yuta-Iwase/7fed0868b1d57d507ab394dc8add4505.js"></script>
+			個々のピカチュウそれぞれに、体力<code class="inlineCode">hp</code>、攻撃力<code class="inlineCode">atk</code>、ニックネーム<code class="inlineCode">nickname</code>の設定をもたせる。
+			それを実現するために<code class="inlineCode">Pikachu</code>の4～6行目で<b>フィールド変数</b>を設定する。このフィールド変数は(基本的に)オブジェクトごとに別々の値を取ることができる。<br>
+			次に、<b>コンストラクタ</b>を設定する。これはオブジェクト生成時に必ず処理される部分で、主にフィールド変数の値を設定(これをフィールド変数の初期化という)するのに用いられる。<br>
+			そして、<code class="inlineCode">GameMaster</code>の5,6行目で2匹のピカチュウ、ピカタロウとピカジロウを生成を行う。見ての通り、各個体ごとに設定できる。<br>
+			ここまで正しく書けていれば<code class="inlineCode">GameMaster</code>を実行することで、以下のメッセージが表示される。<br>
+			<img src="images/fig1.png"><br>
+
+			<div class="space"></div>
+			では、ピカチュウ同士を闘わせてみる。<br>
+			<script src="https://gist.github.com/Yuta-Iwase/619cecb3adf57a5496d36606034d6326.js"></script>
+			<script src="https://gist.github.com/Yuta-Iwase/0093b1edad7922e6969d6f549ca4b1ce.js"></script>
+			<code class="inlineCode">Pikachu</code>に攻撃用のメソッド<code class="inlineCode">attackToPikachu(Pikachu target)</code>とステータス表示のメソッド<code class="inlineCode">printStatus()</code>を追加した。
+			<code class="inlineCode">GameMaster</code>でこれらのメソッドを作動させる。一度書いてしまえは複雑な処理を一行で実行できるのがメソッドの利点。ここまで正しく書けていれば以下のメッセージが表示される。<br>
+			<img src="images/fig2.png"><br>
+
+		</section>
+
+
+	</div>
+	<!--/main-->
+
+
+	<div id="sub">
+
+	<section id="submenu">
+		<iframe src="menu.html" id="menu" scrolling="no" frameborder="no">このブラウザではメニューは表示できません。</iframe>
+	</section>
+
+	</div>
+	<!--/sub-->
+
+	<p id="pagetop"><a href="#">↑ PAGE TOP</a></p>
+
+	</div>
+	<!--/contents-->
+
+	</div>
+	<!--/container-->
+
+	<footer>
+	<small>Copyright&copy; 2018 <a href="https://yuta-iwase.github.io">Yuta Iwase</a> All Rights Reserved.</small>
+	<span class="pr"><a href="http://template-party.com/" target="_blank">Web Design:Template-Party</a></span>
+	</footer>
+
+	<!--スライドショースクリプト-->
+	<script type="text/javascript" src="js/slide_simple_pack.js"></script>
+
+	<!--スマホ用更新情報-->
+	<script type="text/javascript">
+	if (OCwindowWidth() < 480) {
+		open_close("newinfo_hdr", "newinfo");
+	}
+	</script>
+
+</body>
+</html>
