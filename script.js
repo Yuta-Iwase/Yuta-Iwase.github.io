@@ -21,6 +21,6 @@ if(currentYear > 2018){
 // javascriptでアドレスを打ち込む
 // このとき文字はASCIIコードで表現される
 // 参考: https://allabout.co.jp/gm/gc/23933/6/
-var ma = String.fromCharCode(49,55,110,109,49,48,49,102,2**6,118,99,46,105,98,97,114,97,107,105,46,97,99,46,106,112);
-var mt = String.fromCharCode(100+9,100-3,100+5,100+8,100+4**2,100+121/11,58);
+var ma = String.fromCharCode(70 - 21, 39 + 12, 126 - 11, 38 + 11, 71 - 23, 17 + 31, 61 - 9, 108 + 2, 69 - 5, 91 + 12, 124 - 15, 77 + 20, 130 - 25, 81 + 27, 66 - 20, 86 + 13, 113 - 2, 96 + 13);
+var mt = String.fromCharCode(142 - 33, 55 + 42, 107 - 2, 81 + 27, 151 - 35, 105 + 6, 107 - 49);
 document.getElementById("ys6u2p7k").innerHTML= '<a href="'+ mt + ma + '">' + ma + '</a>';
